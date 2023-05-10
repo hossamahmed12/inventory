@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="hsm.css">
+    <title>CRUDS</title>
+</head>
+<body>
+    <div class="cruds">
+        <header>
+            <h2>CRUDS</h2>
+            <p>Product Management System</p>
+        </header>
+        <!-- start inputs -->
+        <div class="inputs">
+            <input type="text" id="title" placeholder="اسم المنتج">
+            <div class="price">
+                <input  onkeyup="getTotal()" type="number" id="price" placeholder="السعر">
+                <input  onkeyup="getTotal()" type="number" id="expenses" placeholder="المصاريف">  
+                <input onkeyup="getTotal()" type="number" id="taxes" placeholder="الضرائب">
+                <input  onkeyup="getTotal()" type="number" id="discount" placeholder="الخصومات">
+                <small id="total">0</small>
+            </div>
+        </div>
+        <input type="number" id="count" placeholder="العدد">
+        <input type="text" id="category" placeholder="النوع">
+        <button id="submit">اضافة</button>
+        <!-- end inputs -->
+        <div class="outputs">
+            <div class="search">
+                <input onkeyup="searchData(this.value)" type="text" name="" id="search" placeholder="بحث">
+                <div class="btnsearch">
+                    <button onclick=" getSearchMood(this.id)" id="searchtitle">البحث بالاسم</button>
+                    <button onclick=" getSearchMood(this.id)" id="searchategory">البحث بالنوع</button>
+                </div>
+                <!-- ! delete all -->
+                <div id="deleteAll">
+                </div>
+                <table border="9">
+                    <tr>
+                        <th>الرقم</th>
+                        <th>الاسم</th>
+                        <th>السعر</th>
+                        <th>الضرائب</th>
+                        <th>المصاريف</th>
+                        <th>الخصومات</th>
+                        <th>المبلغ الكلي</th>
+                        <th>النوع</th>
+                        <th>تحديث البيانات</th>
+                        <th>حذف المنتج</th>
+                    </tr>
+                    <tbody id="tbody">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="hsm.js"></script>
+</body>
+</html>
